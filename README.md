@@ -1,2 +1,2 @@
-# deploy_ai_models_yt
-This repositoy cointains all assigments in Deplay AI models subject
+# deploying_ai_models_yt
+This repositoy cointains all assigments in Deploy AI models subject.
