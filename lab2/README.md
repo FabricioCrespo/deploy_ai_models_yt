@@ -1,4 +1,4 @@
-# Implementatio by Fabricio Crespo
+# Implementation by Fabricio Crespo
 
 ## Commands used to deploy docker with kafka:
 
