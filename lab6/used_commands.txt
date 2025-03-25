@@ -1,0 +1,9 @@
+
+docker build -t jenkins .
+
+docker run -d --name jenkins -p 8080:8080 -p 50000:50000 jenkins:latest
+
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword   
+
+
+docker exec jenkins conda create -n mlip python pytest numpy pandas scikit-learn -c conda-forge
