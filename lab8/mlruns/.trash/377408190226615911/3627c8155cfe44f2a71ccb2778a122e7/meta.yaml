@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/377408190226615911/3627c8155cfe44f2a71ccb2778a122e7/artifacts
+deleted_time: 1743118160945
+end_time: 1743116294871
+entry_point_name: ''
+experiment_id: '377408190226615911'
+lifecycle_stage: deleted
+run_id: 3627c8155cfe44f2a71ccb2778a122e7
+run_name: lyrical-squirrel-39
+run_uuid: 3627c8155cfe44f2a71ccb2778a122e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743116291447
+status: 3
+tags: []
+user_id: fabricio

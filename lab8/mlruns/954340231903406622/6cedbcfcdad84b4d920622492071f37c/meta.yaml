@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/954340231903406622/6cedbcfcdad84b4d920622492071f37c/artifacts
+end_time: 1743118923207
+entry_point_name: ''
+experiment_id: '954340231903406622'
+lifecycle_stage: active
+run_id: 6cedbcfcdad84b4d920622492071f37c
+run_name: debonair-gnat-216
+run_uuid: 6cedbcfcdad84b4d920622492071f37c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743118919997
+status: 3
+tags: []
+user_id: fabricio
