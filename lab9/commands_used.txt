@@ -1,0 +1,39 @@
+docker login -u fabriciocrespo
+
+docker build -t fabriciocrespo/flask_ai_deploy1:1.0.0 -f Dockerfile.backend .
+
+docker push fabriciocrespo/flask_ai_deploy1:1.0.0
+
+minikube start
+
+alias kubectl="minikube kubectl --"
+
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f backend-service.yaml
+
+docker build -t fabriciocrespo/balancer_ai_deploy1:1.0.0 -f Dockerfile.loadbalancer .
+docker push fabriciocrespo/balancer_ai_deploy1:1.0.0
+
+
+kubectl apply -f loadbalancer-deployment.yaml
+kubectl apply -f loadbalancer-service.yaml
+
+minikube ip
+
+curl "http://192.168.49.2:30080/?user_id=Alice"
+
+minikube service flask-load-balancer-service
+curl "http://192.168.49.2:30080/?user_id=TestUser"
+
+link: http://192.168.49.2:30080/?user_id=TestUser
+
+curl "http://192.168.49.2:30080/?user_id=Alice"
+
+
+# APACHE 
+ab -n 100 -c 10 "192.168.49.2:30080/?user_id=Alice"
+
+Hight stress 
+ab -n 1000 -c 50 "http://192.168.49.2:30080/?user_id=Alice"
+
+kubectl logs -l app=flask-backend -f

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  backend-flask-deployment 
+spec:
+  replicas:   2
+  selector:
+    matchLabels:
+      app: flask-backend
+  template:
+    metadata:
+      labels:
+        app: flask-backend
+    spec:
+      containers:
+      - name: flask-backend
+        # TODO: Replace <your-dockerhub-username> with your Docker Hub username
+        image: fabriciocrespo/flask_ai_deploy1:1.0.0
+        ports:
+        - containerPort: 5001
