@@ -1,0 +1,14 @@
+sudo apt install postgresql
+
+
+
+airflow scheduler
+
+airflow webserver -p 8080
+
+docker compose up -d
+
+docker-compose rm -sf -- elimina todos los dockers y empieza desde 0
+
+
+docker exec -it kafka_streaming_movie /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic input_streaming_movies --from-beginning
